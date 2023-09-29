@@ -1,0 +1,58 @@
+[
+    {
+    "name":"Apple 14 pro max",
+    "price":24577,
+    "description":"Apple 14 pro max . It is most selling brand in 2023",
+    "ratings":4.5,
+    "images":[
+        {
+            "images":"apple_34254252.jpg"
+        }
+    ],
+    "category":"Mobile Phones",
+    "seller":"Amazon",
+    "stock":6,
+    "noOfReviews":15,
+    "reviews":[]
+
+
+},
+{
+    "name":"Apple 13 pro ",
+    "price":24577,
+    "description":"Apple 13  max . It is most selling brand in 2023",
+    "ratings":4.5,
+    "images":[
+        {
+            "images":"apple_34254256.jpg"
+        }
+    ],
+    "category":"Mobile Phones",
+    "seller":"Amazon",
+    "stock":6,
+    "noOfReviews":15,
+    "reviews":[]
+
+
+},
+{
+    "name":"Samsung ultra",
+    "price":24577,
+    "description":"Samsung ultra . It is most selling brand in 2023",
+    "ratings":4.5,
+    "images":[
+        {
+            "images":"samsung_342784252.jpg"
+        }
+    ],
+    "category":"Mobile Phones",
+    "seller":"Amazon",
+    "stock":7,
+    "noOfReviews":13,
+    "reviews":[]
+
+
+}
+
+
+]
