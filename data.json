@@ -1,51 +1,109 @@
 [
     {
-    "name":"Apple 14 pro max",
-    "price":24577,
-    "description":"Apple 14 pro max . It is most selling brand in 2023",
-    "ratings":4.5,
+    "name":"Oppo F21s pro",
+    "price":300.00,
+    "description":"Oppo F21s pro. It is most selling brand in 2023",
+    "ratings":3.5,
     "images":[
         {
-            "images":"apple_34254252.jpg"
+            "images":"/images/products/1.jpg"
+        },
+        {
+            "images":"/images/products/2.jpg"
         }
+
     ],
     "category":"Mobile Phones",
     "seller":"Amazon",
     "stock":6,
-    "noOfReviews":15,
+    "noOfReviews":5,
     "reviews":[]
 
 
 },
 {
-    "name":"Apple 13 pro ",
-    "price":24577,
-    "description":"Apple 13  max . It is most selling brand in 2023",
-    "ratings":4.5,
+    "name":"Fire Bolt Smart watch",
+    "price":35.0,
+    "description":"Fire Bolt Smart watch.It is most performance achieved in 2023",
+    "ratings":1.5,
     "images":[
         {
-            "images":"apple_34254256.jpg"
+            "images":"/images/products/2.jpg"
         }
     ],
     "category":"Mobile Phones",
     "seller":"Amazon",
-    "stock":6,
-    "noOfReviews":15,
+    "stock":7,
+    "noOfReviews":10,
     "reviews":[]
 
 
 },
 {
-    "name":"Samsung ultra",
-    "price":24577,
-    "description":"Samsung ultra . It is most selling brand in 2023",
+    "name":"Dell Laptop",
+    "price":400.00,
+    "description":"DELL Laptop i3 gen with latest Model. It is most selling brand in 2023",
     "ratings":4.5,
     "images":[
         {
-            "images":"samsung_342784252.jpg"
+            "images":"/images/products/3.jpg"
         }
     ],
     "category":"Mobile Phones",
+    "seller":"Amazon",
+    "stock":7,
+    "noOfReviews":13,
+    "reviews":[]
+
+
+},
+{
+    "name":"pTron wireless Headphones",
+    "price":50.00,
+    "description":"pTron wireless Headphones. It is most selling brand in 2023",
+    "ratings":2.5,
+    "images":[
+        {
+            "images":"/images/products/4.jpg"
+        }
+    ],
+    "category":"Headphones",
+    "seller":"Amazon",
+    "stock":7,
+    "noOfReviews":13,
+    "reviews":[]
+
+
+},
+{
+    "name":"pTron wireless Headphones 2.0",
+    "price":35.00,
+    "description":"pTron wireless Headphones. It is most selling brand in 2023",
+    "ratings":2.5,
+    "images":[
+        {
+            "images":"/images/products/4.jpg"
+        }
+    ],
+    "category":"Headphones",
+    "seller":"Amazon",
+    "stock":7,
+    "noOfReviews":13,
+    "reviews":[]
+
+
+},
+{
+    "name":"pTron wireless Headphones 3.0",
+    "price":45.00,
+    "description":"pTron wireless Headphones. It is most selling brand in 2023",
+    "ratings":2.5,
+    "images":[
+        {
+            "images":"/images/products/4.jpg"
+        }
+    ],
+    "category":"Electronics",
     "seller":"Amazon",
     "stock":7,
     "noOfReviews":13,

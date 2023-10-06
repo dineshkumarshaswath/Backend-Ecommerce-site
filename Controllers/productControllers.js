@@ -8,14 +8,36 @@ const APIFeatures=require('../utils/apiFeatures')
 
 //get product api --api/v1/products
 exports.getProduct= catchAsyncError(async(req,res,next)=>{
-    const resPerPage=6
-    const apiFeatures= new APIFeatures(Product.find(),req.query).search().filter().paginate(resPerPage)
-    const products= await apiFeatures.query
+    const resPerPage=3
+    
+    
+    let buildQuery=()=>{
+        return new APIFeatures(Product.find(),req.query).search().filter()
+    }
+
+    const filteredProductsCount=  await buildQuery().query.countDocuments()
+    const totalProductCount=await Product.countDocuments({})
+    let productsCount=totalProductCount
+    if( filteredProductsCount !== totalProductCount){
+       
+        productsCount=filteredProductsCount
+    }
+
+    
+    
+    const products= await buildQuery().paginate(resPerPage).query
+    
+    //loading test
+    //await new Promise(resolve =>setTimeout(resolve,3000))
+    //error test
+   // return  next( new ErrorHandler("Product not found",400))
+       
 
     res.status(200).json({
         success:true,
         Message:"successfully got the product data",
-        count:products.length,
+        count:productsCount,
+        resPerPage,
         products
     })
 })
@@ -34,15 +56,15 @@ exports.newProduct= catchAsyncError(async(req,res,next)=>{
 
 exports.getSingleProduct= catchAsyncError(async(req,res,next)=>{
 
-         const products=await Product.findById( {_id:req.params.id})
-    if(!products){
+         const product=await Product.findById( {_id:req.params.id})
+    if(!product){
          //res.status(404).json({ success:false,  message:"Product not found" })
        return  next( new ErrorHandler("Product not found",400))
         
     }
       res.status(201).json({
         success:true,
-        products
+        product
     })
 
         

@@ -23,14 +23,14 @@ class APIFeatures {
         const removeFields= ['keyword','limit','page']
         removeFields.forEach(fields=> delete queryStrCopy[fields])
         //console.log(removeFields)
-        console.log(queryStrCopy)
+        //console.log(queryStrCopy)
 
         let queryStr= JSON.stringify(queryStrCopy)
 
         queryStr=queryStr.replace(/\b(lt|gt|lte|gte)/g,match=>`$${match}`)
         
-        console.log(queryStr)
-        console.log(JSON.parse(queryStr))
+        //console.log(queryStr)
+        //console.log(JSON.parse(queryStr))
 
         this.query.find(JSON.parse(queryStr))
         return this;

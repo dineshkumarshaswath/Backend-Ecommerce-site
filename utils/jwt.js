@@ -3,16 +3,22 @@ const sendToken=(user,statuscode,res)=>{
     
     //function for setting cookie
 
-    const options={
-        expires:new Date(Date.now()+process.env.COOKIE_EXPIRETIME*24*60*60*1000),
-        httpOnly:true
-    }
+    // const options={
+    //     expires:new Date(Date.now()+process.env.COOKIE_EXPIRETIME*24*60*60*1000),
+    //     httpOnly:true
+    // }
 
-    res.status(statuscode).cookie('token',token,options).json({
+    // res.status(statuscode).cookie('token',token,options).json({
+    //     success:true,
+    //     token,
+    //     user
+    // })
+    res.status(statuscode).json({
         success:true,
-        token,
-        user
+        user,
+        token
     })
+
 }
 
 module.exports=sendToken

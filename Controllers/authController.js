@@ -9,7 +9,14 @@ const crypto=require('crypto')
 
 
 exports.registerUser=catchAsyncError(async(req,res,next)=>{
-       const{name,email,password,avatar}=req.body
+       const{name,email,password}=req.body
+        
+       let avatar;
+       if(req.file){
+              avatar=`${process.env.BACKEND_URL}/uploads/user/${req.file.originalname}`
+       }
+
+
        const user= await User.create({
         name,password,email,avatar
        })
@@ -42,10 +49,12 @@ exports.loginUser=catchAsyncError(async(req,res,next)=>{
 })
 
 exports.logoutUser=(req,res,next)=>{
-       res.cookie('token',null,{
+        return res.cookie('token',null,{
               expires:new Date(Date.now()),
               httpOnly:true
        }).status(200).json({success:true,message:"successfully loggedOut"})
+
+      
 }
 
 exports.forgotPassword=catchAsyncError(async (req,res,next)=>{
@@ -59,7 +68,7 @@ exports.forgotPassword=catchAsyncError(async (req,res,next)=>{
        await user.save({validationBeforeSave:false})
        //create reset url
 
-       const resetUrl=`${req.protocol}://${req.get('host')}/reset/${resetToken}`
+       const resetUrl=`${process.env.FRONTEND_URL}/password/reset/${resetToken}`
 
        const message=`your password reset url is as follows \n\n
        ${resetUrl}\n\n if you have not generate this url ,then ignore it`
@@ -138,9 +147,16 @@ exports.updateUserProfile=catchAsyncError(async(req,res,next)=>{
     
 
        //change the name and email
-       const newUserData={
+       let newUserData={
               name:req.body.name,
               email:req.body.email
+       }
+       if(req.file){
+            
+         avatar=`${process.env.BACKEND_URL}/uploads/user/${req.file.originalname}`
+         newUserData={...newUserData,avatar}
+            
+
        }
 //run validators is important 
 

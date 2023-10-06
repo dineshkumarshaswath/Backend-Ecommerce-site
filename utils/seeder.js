@@ -2,8 +2,9 @@ const products=require("../data.json")
 const Product = require("../db/productmodel");
 const dbConnection = require("../dbconnect");
 const dotenv=require("dotenv")
+const path=require('path')
 
-dotenv.config()
+dotenv.config({path:path.join(__dirname,'../config/config.env')})
 
 dbConnection()
 const seedProducts=async()=>{

@@ -1,13 +1,12 @@
 
 const app=require("./app")
-const dotenv=require("dotenv")
+
 const dbConnection = require("./dbconnect")
 const path=require('path')
 
 
 //dotenv.config()
 
-dotenv.config({path:path.join(__dirname,'config/config.env')})
 
 const PORT= process.env.PORT
 const dev=process.env.NODE_ENV

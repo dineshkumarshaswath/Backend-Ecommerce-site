@@ -4,15 +4,36 @@ const catchAsyncError = require("./catchAsyncError");
 const User = require("../db/usermodel");
 
 exports.isAuthenticatedUser=catchAsyncError(async(req,res,next)=>{
-         const{token}=req.cookies
+         // const{token}=req.headers
          
-         if(!token){
+         // if(!token){
+         //    return next(new ErrorHandler('login first ot handle this server',401))
+         // }
+         // const decode= Jwt.verify(token,process.env.JWT_SECRETKEY)
+         
+         // req.user= await User.findById(decode.id)
+         // next()
+        
+
+      if (req.headers) {
+         let token;
+         
+          token = await req.headers["x-auth-token"]
+          if (!token) {
             return next(new ErrorHandler('login first ot handle this server',401))
-         }
-         const decode= Jwt.verify(token,process.env.JWT_SECRETKEY)
-         
-         req.user= await User.findById(decode.id)
-         next()
+          } else {
+              const decode = Jwt.verify(token, process.env.JWT_SECRETKEY);
+              req.user = await User.findById(decode.id)
+              //console.log(req.user)
+              next()
+          }
+
+
+      }
+
+
+
+
 
 
 })
@@ -23,6 +44,7 @@ exports.isAuthorizeRoles=(...roles)=>{
       //console.log(req.user.id) only id number
       
       if(!roles.includes(req.user.role)){
+         console.log(req.user.role)
          return next(new ErrorHandler(`Role ${req.user.role} is not  eligible for access this request`,401))
 
       }
