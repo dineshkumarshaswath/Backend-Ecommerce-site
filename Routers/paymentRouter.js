@@ -8,8 +8,8 @@ const router=express.Router()
 
 // router.route("/stripeapi").get(isAuthenticatedUser,sendStripeApi)
 
-router.route("/ordercreate").post(ordersRequest)
-router.route("/verifyorder").post(verfiyRequest)
+router.route("/ordercreate").post(isAuthenticatedUser,ordersRequest)
+router.route("/verifyorder").post(isAuthenticatedUser,verfiyRequest)
 
 
 
