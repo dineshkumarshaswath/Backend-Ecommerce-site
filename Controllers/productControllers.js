@@ -56,7 +56,7 @@ exports.newProduct= catchAsyncError(async(req,res,next)=>{
 
 exports.getSingleProduct= catchAsyncError(async(req,res,next)=>{
 
-         const product=await Product.findById( {_id:req.params.id})
+         const product=await Product.findById( {_id:req.params.id}).populate('reviews.user','name email')
     if(!product){
          //res.status(404).json({ success:false,  message:"Product not found" })
        return  next( new ErrorHandler("Product not found",400))
