@@ -6,10 +6,10 @@
     "ratings":3.5,
     "images":[
         {
-            "images":"/images/products/1.jpg"
+            "image":"/images/products/1.jpg"
         },
         {
-            "images":"/images/products/2.jpg"
+            "image":"/images/products/2.jpg"
         }
 
     ],
@@ -28,7 +28,7 @@
     "ratings":1.5,
     "images":[
         {
-            "images":"/images/products/2.jpg"
+            "image":"/images/products/2.jpg"
         }
     ],
     "category":"Mobile Phones",
@@ -46,7 +46,7 @@
     "ratings":4.5,
     "images":[
         {
-            "images":"/images/products/3.jpg"
+            "image":"/images/products/3.jpg"
         }
     ],
     "category":"Mobile Phones",
@@ -64,7 +64,7 @@
     "ratings":2.5,
     "images":[
         {
-            "images":"/images/products/4.jpg"
+            "image":"/images/products/4.jpg"
         }
     ],
     "category":"Headphones",
@@ -82,7 +82,7 @@
     "ratings":2.5,
     "images":[
         {
-            "images":"/images/products/4.jpg"
+            "image":"/images/products/4.jpg"
         }
     ],
     "category":"Headphones",
@@ -100,7 +100,7 @@
     "ratings":2.5,
     "images":[
         {
-            "images":"/images/products/4.jpg"
+            "image":"/images/products/4.jpg"
         }
     ],
     "category":"Electronics",
