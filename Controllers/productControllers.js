@@ -151,7 +151,8 @@ exports.createReview=catchAsyncError(async(req,res,next)=>{
     },0))/product.reviews.length
 
     product.ratings =isNaN(product.ratings)?0:product.ratings
-    await product.save({validationBeforesave:false})
+    await product.save({validationBeforeSave:false})
+  
 
     return res.status(200).json({
         success:true,
