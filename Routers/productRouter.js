@@ -8,7 +8,7 @@ const router=express.Router()
 
 router.route("/products").get(getProduct)
 router.route("/products/new").post(isAuthenticatedUser,isAuthorizeRoles('admin'),newProduct)
-router.route("/admin/products").post(isAuthenticatedUser,isAuthorizeRoles('admin'),getAdminProducts)
+router.route("/admin/products").get(isAuthenticatedUser,isAuthorizeRoles('admin'),getAdminProducts)
 
 router.route("/products/:id").get(getSingleProduct).put(updateProduct)
                               .delete(deleteProduct);
