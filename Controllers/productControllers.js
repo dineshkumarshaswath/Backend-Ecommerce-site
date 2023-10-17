@@ -45,6 +45,16 @@ exports.getProduct = catchAsyncError(async (req, res, next) => {
 //create product api --api/v1/products/new
 
 exports.newProduct = catchAsyncError(async (req, res, next) => {
+    let images=[] 
+    
+    if(req.files.length >0){
+        req.file.forEach(file=>{
+            let url=`https://e-commerce-dk.onrender.com/uploads/product/${file.originalname}`
+            images.push({image:url})
+        })
+    }
+    req.body.images = images
+
     req.body.user = req.user.id
 
     const products = await Product.create(req.body);
