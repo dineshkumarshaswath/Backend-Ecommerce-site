@@ -22,13 +22,15 @@ const router=express.Router()
 
 router.route("/products").get(getProduct)
 
-
+// admin router
 router.route("/products/new").post(isAuthenticatedUser,isAuthorizeRoles('admin'),upload.array('images'), newProduct)
 router.route("/admin/products").get(isAuthenticatedUser,isAuthorizeRoles('admin'),getAdminProducts)
+router.route("/admin/product/:id").delete(isAuthenticatedUser,isAuthorizeRoles('admin'),deleteProduct)
+router.route("/admin/product/:id").put(isAuthenticatedUser,isAuthorizeRoles('admin'),updateProduct)
 
 
-router.route("/products/:id").get(getSingleProduct).put(updateProduct)
-                              .delete(deleteProduct);
+router.route("/products/:id").get(getSingleProduct)
+                             
 router.route("/allreviews").get(getReviews)
 router.route("/reviews").delete(deleteReview)
 
