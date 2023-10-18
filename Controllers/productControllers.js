@@ -83,8 +83,27 @@ exports.getSingleProduct = catchAsyncError(async (req, res, next) => {
 })
 
 exports.updateProduct = async (req, res, next) => {
-    const products = await Product.findById(req.params.id)
-    if (!products) {
+    let product = await Product.findById(req.params.id)
+    let images=[] 
+  
+    //we keep the images all are same
+
+    if(req.body.imagesCleared === 'false'){
+        images=product.images
+    }
+    
+    if(req.files.length > 0){
+        req.files.forEach(file=>{
+            let url=`https://e-commerce-dk.onrender.com/uploads/product/${file.originalname}`
+            images.push({image:url})
+        })
+    }
+     
+
+    req.body.images = images
+
+
+    if (!product) {
         return res.status(404).json({
             success: false,
             message: "Product not found"
@@ -92,7 +111,7 @@ exports.updateProduct = async (req, res, next) => {
     }
 
 
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body,
+    product = await Product.findByIdAndUpdate(req.params.id, req.body,
         { new: true, runValidators: true })
     res.status(201).json({
         success: true,
