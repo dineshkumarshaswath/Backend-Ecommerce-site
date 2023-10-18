@@ -47,8 +47,8 @@ exports.getProduct = catchAsyncError(async (req, res, next) => {
 exports.newProduct = catchAsyncError(async (req, res, next) => {
     let images=[] 
     
-    if(req.files.length >0){
-        req.file.forEach(file=>{
+    if(req.files.length > 0){
+        req.files.forEach(file=>{
             let url=`https://e-commerce-dk.onrender.com/uploads/product/${file.originalname}`
             images.push({image:url})
         })
