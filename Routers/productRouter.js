@@ -21,6 +21,9 @@ const path=require('path')
 const router=express.Router()
 
 router.route("/products").get(getProduct)
+router.route("/products/:id").get(getSingleProduct)
+ //create review router
+ router.route("/product/review").put(isAuthenticatedUser,createReview)       
 
 // admin router
 router.route("/products/new").post(isAuthenticatedUser,isAuthorizeRoles('admin'),upload.array('images'), newProduct)
@@ -28,16 +31,17 @@ router.route("/admin/products").get(isAuthenticatedUser,isAuthorizeRoles('admin'
 router.route("/admin/product/:id").delete(isAuthenticatedUser,isAuthorizeRoles('admin'),deleteProduct)
 router.route("/admin/product/:id").put(isAuthenticatedUser,isAuthorizeRoles('admin'),upload.array('images'),updateProduct)
 
+router.route("/admin/allreviews").get(isAuthenticatedUser,isAuthorizeRoles('admin'),getReviews)
+router.route("/admin/review").delete(isAuthenticatedUser,isAuthorizeRoles('admin'),deleteReview)          
 
-router.route("/products/:id").get(getSingleProduct)
-                             
-router.route("/allreviews").get(getReviews)
-router.route("/reviews").delete(deleteReview)
+ 
+                  
+
+
 
 
                             
- //create review router
- router.route("/product/review").put(isAuthenticatedUser,createReview)                          
+                   
 
 
 module.exports=router

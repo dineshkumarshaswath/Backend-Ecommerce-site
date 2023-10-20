@@ -198,10 +198,8 @@ exports.createReview = catchAsyncError(async (req, res, next) => {
 
 exports.getReviews = catchAsyncError(async (req, res, next) => {
 
-    const product = await Product.findById(req.query.id);
-    // if(product.reviews.length == 0){
-    //     return res.status(404).json({success:false,message:"there is no review for this product"})
-    // }
+    const product = await Product.findById(req.query.id).populate('reviews.user', 'name email')
+   
     return res.status(200).json({
         success: true,
         reviews: product.reviews
