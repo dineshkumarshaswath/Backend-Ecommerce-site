@@ -68,7 +68,7 @@ exports.forgotPassword=catchAsyncError(async (req,res,next)=>{
        await user.save({validationBeforeSave:false})
        //create reset url
 
-       const resetUrl=`${process.env.FRONTEND_URL}/password/reset/${resetToken}`
+       const resetUrl=`https://dkshop-e-commerce-site.netlify.app/password/reset/${resetToken}`
 
        const message=`your password reset url is as follows \n\n
        ${resetUrl}\n\n if you have not generate this url ,then ignore it`
