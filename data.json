@@ -1,8 +1,8 @@
 [
     {
-    "name":"Oppo F21s pro",
-    "price":300.00,
-    "description":"Oppo F21s pro. It is most selling brand in 2023",
+    "name":"Apple iPhone 13 (128GB) - Starlight",
+    "price":506,
+    "description":"Advanced dual-camera system with 12MP Wide and Ultra Wide cameras; Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording",
     "ratings":3.5,
     "images":[
         {
@@ -22,14 +22,18 @@
 
 },
 {
-    "name":"Fire Bolt Smart watch",
-    "price":35.0,
-    "description":"Fire Bolt Smart watch.It is most performance achieved in 2023",
-    "ratings":1.5,
+    "name":"Apple iPhone 14 Pro Max (1 TB) - Gold",
+    "price":700,
+    "description":"17.00 cm (6.7-inch) Super Retina XDR display featuring Always-On and ProMotion",
+    "ratings":4.5,
     "images":[
         {
-            "image":"/images/products/2.jpg"
+            "image":"/images/products/3.jpg"
+        },
+        {
+            "image":"/images/products/4.jpg"
         }
+
     ],
     "category":"Mobile Phones",
     "seller":"Amazon",
@@ -40,72 +44,83 @@
 
 },
 {
-    "name":"Dell Laptop",
+    "name":"iQOO Z7s 5G by vivo (Norway Blue, 6GB RAM, 128GB Storage",
     "price":400.00,
-    "description":"DELL Laptop i3 gen with latest Model. It is most selling brand in 2023",
+    "description":"Snapdragon 695 5G Mobile Processor with a 6nm energy efficient process which will consume less power and enhance the battery life",
     "ratings":4.5,
     "images":[
         {
-            "image":"/images/products/3.jpg"
+            "image":"/images/products/5.jpg"
+        },
+        {
+            "image":"/images/products/6.jpg"
         }
     ],
     "category":"Mobile Phones",
     "seller":"Amazon",
-    "stock":7,
+    "stock":8,
     "noOfReviews":13,
     "reviews":[]
 
 
 },
 {
-    "name":"pTron wireless Headphones",
-    "price":50.00,
-    "description":"pTron wireless Headphones. It is most selling brand in 2023",
+    "name":"Oppo A79 5G (Glowing Green, 8GB RAM, 128GB Storage) | 5000 mAh Battery",
+    "price":140.00,
+    "description":"Big 5000 mAh Battery with All-Day AI Power Saving + 33W SUPERVOOC Charging with 5-layer charging protection to make charging safer",
     "ratings":2.5,
     "images":[
         {
-            "image":"/images/products/4.jpg"
+            "image":"/images/products/7.jpg"
+        },
+        {
+            "image":"/images/products/8.jpg"
         }
+
     ],
-    "category":"Headphones",
+    "category":"Mobile Phones",
     "seller":"Amazon",
-    "stock":7,
+    "stock":12,
     "noOfReviews":13,
     "reviews":[]
 
 
 },
 {
-    "name":"pTron wireless Headphones 2.0",
-    "price":35.00,
-    "description":"pTron wireless Headphones. It is most selling brand in 2023",
-    "ratings":2.5,
+    "name":"Samsung Galaxy S23 Ultra 5G (Cream, 12GB, 256GB Storage)",
+    "price":400.00,
+    "description":"More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature.",
+    "ratings":4.5,
     "images":[
         {
-            "image":"/images/products/4.jpg"
+            "image":"/images/products/9.jpg"
+        },
+        {
+            "image":"/images/products/10.jpg"
         }
+
     ],
-    "category":"Headphones",
+    "category":"Mobile Phones",
     "seller":"Amazon",
-    "stock":7,
-    "noOfReviews":13,
+    "stock":9,
+    "noOfReviews":15,
     "reviews":[]
 
 
 },
 {
-    "name":"pTron wireless Headphones 3.0",
-    "price":45.00,
-    "description":"pTron wireless Headphones. It is most selling brand in 2023",
+    "name":"Acer Aspire Lite AMD Ryzen 5 5500U Premium Thin and Light Laptop (16 GB RAM/512 GB SSD/Windows 11 Home)",
+    "price":300.00,
+    "description":"Processor : AMD Ryzen 5 5500U Hexa-Core Mobile Processor with AMD Radeon Graphics.Maximum Power Supply Wattage 45 W",
     "ratings":2.5,
     "images":[
         {
-            "image":"/images/products/4.jpg"
+            "image":"/images/products/11.jpg"
         }
     ],
-    "category":"Electronics",
+    "category":"Laptops",
     "seller":"Amazon",
-    "stock":7,
+    "stock":15,
     "noOfReviews":13,
     "reviews":[]
 
